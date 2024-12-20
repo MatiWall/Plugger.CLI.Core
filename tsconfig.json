@@ -1,12 +1,18 @@
 {
-    "compilerOptions": {
-      "target": "ESNext",
-      "module": "CommonJS",
-      "rootDir": "./src",
-      "outDir": "./dist",
-      "strict": true,
-      "esModuleInterop": true
-    },
-    "include": ["src"]
-  }
-  
+  "compilerOptions": {
+    "module": "ES2022",
+    "target": "ES2022", 
+    "outDir": "./dist",  
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "useUnknownInCatchVariables": false,
+    "declaration": true,   
+    "paths": {
+   //   "@plugger/*": ["./node_modules/@plugger/*"]
+    } 
+  },
+  "include": ["src/**/*.ts"],
+ //"exclude": ["node_modules/"]
+}

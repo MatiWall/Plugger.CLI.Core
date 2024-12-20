@@ -1,4 +1,5 @@
 import { createCommand } from "commander";
+import { readConfig, start } from "../../actions";
 
 
 function startDevServer(){
@@ -9,7 +10,12 @@ function startDevServer(){
         .option('-p, --port <number>', 'Port to run the server on', '3000')
         .option('-c, --config <string>', 'Path to the desired config file', undefined) // default behavior defined in action 
         .action((options) =>{
-            console.log(`Running on port ${options.port}`)
+            
+            start({
+                port: Number(options.port),
+                config: options.config
+            })
+
         });
     return command
 }
