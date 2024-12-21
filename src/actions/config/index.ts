@@ -1,8 +1,6 @@
-import { moveConfig } from "./moveConfig";
-import { readConfig } from "./readConfig";
+import { readConfig } from "./readConfig.js";
 
 
 export {
     readConfig,
-    moveConfig
 }

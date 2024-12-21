@@ -1,5 +1,5 @@
-import { readConfig } from "./config";
-import { start } from "./frontend/start";
+import { readConfig } from "./config/index.js";
+import { start } from "./frontend/start.js";
 
 export {
     readConfig,

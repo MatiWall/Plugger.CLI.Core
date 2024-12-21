@@ -1,7 +1,6 @@
-import { fileURLToPath } from 'node:url'
 import { createServer } from 'vite';
-import { readConfig } from '../config';
-
+import { readConfig } from '../config/index.js';
+import path from 'node:path';
 
 
 type StartOptions = {
@@ -15,18 +14,32 @@ async function start(options: StartOptions){
 
     let config = {};
     try {
-        const config = readConfig(options.config);
+        config = readConfig(options.config);
     }
     catch (error) {
-        console.debug('Failed to find a config.')
+        console.debug('Failed to find a config, using default.')
     }
+    const currentWorkingDir = process.cwd();
+        // Vite custom plugin to log the index.html file path
+    const logIndexFilePlugin = {
+            name: 'log-index-file',
+            configureServer(server: any) {
+                // Log the index.html file path when the server starts
+                const indexHtmlPath = path.join(currentWorkingDir, 'index.html');
+                console.log(`Serving index.html from: ${indexHtmlPath}`);
+            },
+        };
     
     const server = await createServer({
+        plugins: [
+            logIndexFilePlugin
+        ],
         define: {
-            'process.end.argv': process.argv,
-            'process.end.APP_CONFIG': JSON.stringify(config)
+            'process.env.argv': process.argv,
+            'process.env.APP_CONFIG': JSON.stringify(config),
+            'process.env.test': 2
         },
-        root: __dirname,
+        root: currentWorkingDir,
         server: {
             port: options.port
         }

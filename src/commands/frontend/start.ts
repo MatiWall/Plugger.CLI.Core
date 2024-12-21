@@ -1,5 +1,5 @@
 import { createCommand } from "commander";
-import { readConfig, start } from "../../actions";
+import { readConfig, start } from "../../actions/index.js";
 
 
 function startDevServer(){

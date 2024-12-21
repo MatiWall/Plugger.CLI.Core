@@ -7,17 +7,18 @@
   "repository": "git@github.com:MatiWall/Plugger.CLI.Core.git",
   "author": "Matias Wallenius <MatiWall@live.dk>",
   "license": "MIT",
+  "type": "module",
   "bin": {
     "plugger": "./dist/index.js"
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "yarn clean && tsc",
+    "build": "yarn clean && tsc && chmod u+x dist/*",
     "pub": "yarn publish --registry http://verdaccio.mw.local/",
     "local-add": "yarn add --registry http://verdaccio.mw.local/"
   },
   "dependencies": {
-    "@plugger/configuration-loader": "^0.1.4",
+    "@plugger/configuration-loader": "^0.1.7",
     "@types/figlet": "^1.7.0",
     "commander": "^12.1.0",
     "figlet": "^1.8.0",

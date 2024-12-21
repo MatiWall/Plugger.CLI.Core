@@ -1,5 +1,5 @@
 import { createCommand } from "commander";
-import startDevServer from "./start";
+import startDevServer from "./start.js";
 
 
 const frontendCommand = createCommand('frontend');

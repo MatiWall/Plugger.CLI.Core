@@ -1,18 +1,16 @@
 {
   "compilerOptions": {
-    "module": "ES2022",
-    "target": "ES2022", 
+    "module": "NodeNext",
+    "target": "ES6",
+    "moduleResolution": "nodenext",
     "outDir": "./dist",  
-    "moduleResolution": "node",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "useUnknownInCatchVariables": false,
     "declaration": true,   
-    "paths": {
-   //   "@plugger/*": ["./node_modules/@plugger/*"]
-    } 
+    //"allowImportingTsExtensions": true,
   },
   "include": ["src/**/*.ts"],
- //"exclude": ["node_modules/"]
+  "exclude": ["node_modules/"]
 }
