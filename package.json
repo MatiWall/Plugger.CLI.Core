@@ -18,12 +18,13 @@
     "local-add": "yarn add --registry http://verdaccio.mw.local/"
   },
   "dependencies": {
-    "@plugger/configuration-loader": "^0.1.7",
+    "@plugger/configuration-core": "^0.1.2",
     "@types/figlet": "^1.7.0",
     "commander": "^12.1.0",
     "figlet": "^1.8.0",
     "typescript": "^5.7.2",
-    "vite": "^6.0.5"
+    "vite": "^6.0.5",
+    "yaml": "^2.7.0"
   },
   "devDependencies": {
     "@types/node": "^22.10.2"

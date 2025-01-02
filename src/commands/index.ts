@@ -1,4 +1,4 @@
-import {frontendCommand } from "./frontend/index.js";
+import {frontendCommand } from "./start/index.js";
 import { Command } from "commander";
 import figlet from 'figlet';
 

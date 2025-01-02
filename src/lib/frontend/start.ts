@@ -1,6 +1,6 @@
 import { createServer } from 'vite';
-import { readConfig } from '../config/index.js';
 import path from 'node:path';
+import { readConfig } from '../index.js';
 
 
 type StartOptions = {

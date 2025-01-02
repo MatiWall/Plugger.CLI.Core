@@ -1,9 +1,9 @@
 import { createCommand } from "commander";
-import { readConfig, start } from "../../actions/index.js";
+import { readConfig, start } from "../../lib/index.js";
 
 
 function startDevServer(){
-    const command =  createCommand('start');
+    const command =  createCommand('frontend');
 
     command
         .description('Start frontend development server')

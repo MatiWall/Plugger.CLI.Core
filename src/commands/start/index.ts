@@ -1,8 +1,8 @@
 import { createCommand } from "commander";
-import startDevServer from "./start.js";
+import startDevServer from "./startFrontend.js";
 
 
-const frontendCommand = createCommand('frontend');
+const frontendCommand = createCommand('start');
 
 
 
