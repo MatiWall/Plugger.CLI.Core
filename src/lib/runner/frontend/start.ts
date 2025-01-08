@@ -36,8 +36,7 @@ async function start(options: StartOptions){
         ],
         define: {
             'process.env.argv': process.argv,
-            'process.env.APP_CONFIG': JSON.stringify(config),
-            'process.env.test': 2
+            'process.env.APP_CONFIG': JSON.stringify(config)
         },
         root: currentWorkingDir,
         server: {

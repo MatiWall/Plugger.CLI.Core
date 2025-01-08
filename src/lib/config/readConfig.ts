@@ -9,7 +9,7 @@ function fetchConfig(filePath): ConfigType {
     const ext = path.extname(filePath).toLowerCase();  // Use 'this.path' directly
 
     // Ensure the file exists
-    if (!this.path || !fs.existsSync(filePath)) {
+    if (!filePath || !fs.existsSync(filePath)) {
         throw new Error(`File not found: ${filePath}`);
     }
 
@@ -35,7 +35,7 @@ function parseFileContent(fileContent: string, ext: string): ConfigType {
 }
 
 function readConfig(configPath?: string) {
-    let files = ['./app-config.yaml', 'app-config.yml', 'app-config.json'];
+    let files = ['./app-config.yaml', './app-config.yml', './app-config.json'];
 
     if (configPath) {
         // If a path is provided, use it as the only file to load.
