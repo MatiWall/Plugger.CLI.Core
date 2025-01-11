@@ -1,7 +1,7 @@
 {
-  "name": "Plugger.CLI.Core",
-  "version": "0.0.1",
-  "description": "Plugger cli used to build and serve apps build using the Å",
+  "name": "@plugger/cli-core",
+  "version": "0.1.2",
+  "description": "Plugger cli used to build and serve apps build using the plugger framework",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": "git@github.com:MatiWall/Plugger.CLI.Core.git",
@@ -11,6 +11,9 @@
   "bin": {
     "plugger": "./dist/index.js"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "clean": "rm -rf dist",
     "build": "yarn clean && tsc && chmod u+x dist/*",

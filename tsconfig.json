@@ -9,6 +9,7 @@
     "forceConsistentCasingInFileNames": true,
     "useUnknownInCatchVariables": false,
     "declaration": true,   
+    "lib": ["es6", "dom", "es2017"],
     //"allowImportingTsExtensions": true,
   },
   "include": ["src/**/*.ts"],

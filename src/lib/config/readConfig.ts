@@ -5,7 +5,7 @@ import { parse as parseYaml } from 'yaml';
 import { ConfigType, ConfigSchema } from '@plugger/configuration-core';
 
 
-function fetchConfig(filePath): ConfigType {
+function fetchConfig(filePath: string): ConfigType {
     const ext = path.extname(filePath).toLowerCase();  // Use 'this.path' directly
 
     // Ensure the file exists
