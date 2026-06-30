@@ -5,6 +5,7 @@ import path from 'node:path';
 
 type StartOptions = {
     port: number,
+    host: string,
     config: string
 }
 
@@ -40,7 +41,8 @@ async function start(options: StartOptions){
         },
         root: currentWorkingDir,
         server: {
-            port: options.port
+            port: options.port,
+            host: options.host
         }
 
     })

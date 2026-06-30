@@ -1,6 +1,6 @@
 {
   "name": "@plugger/cli-core",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Plugger cli used to build and serve apps build using the plugger framework",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,9 +16,9 @@
   ],
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "yarn clean && tsc && chmod u+x dist/*",
-    "pub": "yarn publish --registry http://verdaccio.mw.local/",
-    "local-add": "yarn add --registry http://verdaccio.mw.local/"
+    "build": "tsc",
+    "pub": "npm publish --registry https://verdaccio.mw.local/",
+    "local-add": "yarn add --registry https://verdaccio.mw.local/"
   },
   "dependencies": {
     "@plugger/configuration-core": "^0.1.2",
